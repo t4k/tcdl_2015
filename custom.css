@@ -54,5 +54,12 @@ section .triptych-right {
 .bg-solr .slide-background.present,
 .bg-drupal .slide-background.present,
 .bg-islandora .slide-background.present {
-  box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.9);
+}
+
+.first .reveal h3 {
+  margin-top: 1em;
+}
+.first .reveal p {
+  margin-top: 1em;
 }
