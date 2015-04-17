@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Frutiger';
+    src: url('frutiger.eot');
+    src: url('frutiger.eot?#iefix') format('embedded-opentype'),
+         url('frutiger.woff2') format('woff2'),
+         url('frutiger.woff') format('woff'),
+         url('frutiger.ttf') format('truetype'),
+         url('frutiger.svg#frutiger') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fruitger';
+    src: url('frutiger-bold.eot');
+    src: url('frutiger-bold.eot?#iefix') format('embedded-opentype'),
+         url('frutiger-bold.woff2') format('woff2'),
+         url('frutiger-bold.woff') format('woff'),
+         url('frutiger-bold.ttf') format('truetype'),
+         url('frutiger-bold.svg#frutigerbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
