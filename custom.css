@@ -1,0 +1,57 @@
+/*********************************************
+ * CUSTOM STYLES
+ *********************************************/
+* {
+  box-sizing: border-box;
+}
+
+#logo {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 1em;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  text-transform: none;
+}
+
+.reveal section img {
+  border: none;
+  box-shadow: none;
+}
+
+section .left {
+  float: left;
+  text-align: left;
+  width: 50%;
+}
+section .right {
+  float: right;
+  width: 50%;
+}
+section .triptych-left {
+  float: left;
+  width: 33.333%;
+}
+section .triptych-center {
+  float: left;
+  width: 33.333%;
+}
+section .triptych-right {
+  float: left;
+  width: 33.333%;
+}
+
+.bg-cherryhill .slide-background.present,
+.bg-fedora .slide-background.present,
+.bg-solr .slide-background.present,
+.bg-drupal .slide-background.present,
+.bg-islandora .slide-background.present {
+  box-shadow: inset 0 0 0 10000px rgba(255, 255, 255, 0.8);
+}

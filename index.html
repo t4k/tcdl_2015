@@ -15,7 +15,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+		<link rel="stylesheet" href="custom.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -38,8 +39,358 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 
+				<!-- This `img` will appear on every slide. See `custom.css` for positiong and sizing styles. -->
+				<img src="images/logos/cherryhill_logo.svg" id="logo">
+
+				<section data-markdown>
+					<script type="text/template">
+						# Using Islandora for Open-Source Powered Digital Collections
+						### Texas Conference on Digital Libraries 2015
+
+						Presented by [Tommy Keswick](https://chillco.com/about/tommy-keswick) / [@TommyKeswick](https://twitter.com/TommyKeswick)
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						# Agenda
+
+						- What is Islandora?
+						- Why choose Islandora?
+						- Show and tell
+					</script>
+				</section>
+
 				<section>
-					<h1>Using Islandora for Open-Source Powered Digital Collections</h1>
+					<!-- begin nested slides -->
+					<section>
+						<div class="left" data-markdown>
+							<script type="text/template">
+							# About Me
+
+							- Drupal/Islandora developer at The Cherry Hill Company
+							- librarian by training  
+							  (UCLA MLIS 2008)
+							- library consortium background
+							</script>
+						</div>
+						<div class="right" data-markdown>
+							<script type="text/template">
+							![photo of Tommy Keswick](images/tommy.jpg)
+							[@TommyKeswick](https://twitter.com/TommyKeswick)
+							</script>
+						</div>
+					</section>
+
+					<section data-state="bg-cherryhill" data-background="images/logos/cherryhill_bg.png" data-background-size="contain" data-markdown>
+						<script type="text/template">
+							# The Cherry Hill Company
+
+							We have been working with libraries since 1995.
+
+							We specialize in open-source tools to build, host, and support websites and repositories for libraries.
+
+							[@thecherryhillco](https://twitter.com/thecherryhillco)
+						</script>
+					</section>
+					<!-- end nested slides -->
+				</section>
+
+				<section>
+					<div data-markdown>
+						<script type="text/template">
+							# What is Islandora?
+
+							![Islandora logo](images/logos/islandora.png)
+						</script>
+					</div>
+					<div class="triptych">
+						<div class="triptych-left" data-markdown>
+							<script type="text/template">
+								![Fedora logo](images/logos/fedora.png) <!-- .element: class="fragment" -->
+							</script>
+						</div>
+						<div class="triptych-center" data-markdown>
+							<script type="text/template">
+								![Solr logo](images/logos/solr.png) <!-- .element: class="fragment" -->
+							</script>
+						</div>
+						<div class="triptych-right" data-markdown>
+							<script type="text/template">
+								![Drupal logo](images/logos/drupal.png) <!-- .element: class="fragment" -->
+							</script>
+						</div>
+					</div>
+				</section>
+
+				<section data-state="bg-fedora" data-background="images/logos/fedora_bg.png" data-background-size="contain" data-background-transition="zoom" data-markdown>
+					<script type="text/template">
+						# What is Islandora?
+						### Fedora Repository
+						- stores digital masters
+						- stores metadata
+						- manages collections
+						- manages relationships between objects
+					</script>
+				</section>
+
+				<section data-state="bg-solr" data-background="images/logos/solr_bg.png" data-background-size="contain" data-background-transition="zoom" data-markdown>
+					<script type="text/template">
+						# What is Islandora?
+						### Apache Solr
+						- indexes all the object metadata
+						- allows faceted search
+						- highly configurable
+					</script>
+				</section>
+
+				<section data-state="bg-drupal" data-background="images/logos/drupal_bg.png" data-background-size="contain" data-background-transition="zoom" data-markdown>
+					<script type="text/template">
+						# What is Islandora?
+						### Drupal
+						- content management system
+						- provides interfaces
+						- website functionality
+						- provides extensible framework
+					</script>
+				</section>
+
+				<section data-state="bg-islandora" data-background="images/logos/islandora_bg.png" data-background-size="contain" data-background-transition="zoom" data-markdown>
+					<script type="text/template">
+						# What is Islandora?
+						### Islandora
+						- set of Drupal modules
+						- software libraries
+						- Solution Packs
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						# Why Choose Islandora?
+
+						- free & open-source software <!-- .element: class="fragment" -->
+						- digital library standards <!-- .element: class="fragment" -->
+						- true repository features <!-- .element: class="fragment" -->
+						- extensive customizability <!-- .element: class="fragment" -->
+
+						<aside class="notes">
+							- no vendor lock-in  
+							- many vendors available ¶  
+
+							- MODS, PREMIS, DC metadata  
+							- BagIt exports …and more ¶  
+
+							- digital masters are stored  
+							- preservation metadata available  
+							- automatic derivative generation ¶  
+
+							- frontend theme can be anything  
+							- backend cms can be extended  
+							- search configuration tuning ¶  
+						</aside>
+
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						# Show and Tell
+
+						- Object Viewers
+						- Content Models / Object Types
+						- Form Builder
+						- Customizations
+					</script>
+				</section>
+
+				<section>
+					<!-- begin nested slides -->
+					<section data-markdown>
+						<script type="text/template">
+							# Show and Tell
+							## Object Viewers
+							- [OpenSeadragon](https://openseadragon.github.io/) <!-- .element: target="_blank" -->
+							- [jQuery Zoom](http://www.jacklmoore.com/zoom/) <!-- .element: target="_blank" -->
+							- [Internet Archive BookReader](http://www.archive.org/stream/birdbookillustra00reedrich) <!-- .element: target="_blank" -->
+							- [video.js](http://www.videojs.com/) <!-- .element: target="_blank" -->
+							- [pdf.js](https://mozilla.github.io/pdf.js/web/viewer.html) <!-- .element: target="_blank" -->
+						</script>
+					</section>
+
+					<section>
+							<img src="images/screenshots/openseadragon.png">
+					</section>
+					<section>
+							<img src="images/screenshots/jquery_zoom.png">
+					</section>
+					<section>
+							<img src="images/screenshots/internet_archive_bookreader.png">
+					</section>
+					<section>
+							<img src="images/screenshots/videojs.png">
+					</section>
+					<section>
+							<img src="images/screenshots/pdfjs.png">
+					</section>
+					<!-- end nested slides -->
+				</section>
+
+				<section>
+					<!-- begin nested slides -->
+					<section data-markdown>
+						<script type="text/template">
+							# Show and Tell
+							## Content Models / Object Types
+							- [images](http://sandbox.islandora.ca/islandora/object/islandora%3Asp_large_image_collection) <!-- .element: target="_blank" -->
+							- [books](http://sandbox.islandora.ca/islandora/object/islandora%3AbookCollection) <!-- .element: target="_blank" -->
+							- [audio](http://sandbox.islandora.ca/islandora/object/islandora%3Aaudio_collection) <!-- .element: target="_blank" -->
+							- [video](http://sandbox.islandora.ca/islandora/object/islandora%3Avideo_collection) <!-- .element: target="_blank" -->
+							- [citations / scholarly papers](http://sandbox.islandora.ca/islandora/object/ir%3AcitationCollection) <!-- .element: target="_blank" -->
+							- [newspapers](http://sandbox.islandora.ca/islandora/object/islandora%3Anewspaper_collection) <!-- .element: target="_blank" -->
+
+							<aside class="notes">
+								- islandora handles any type of object  
+								- content models allow types to have different attributes  
+									- what file types uploaded  
+									- what metadata to collect  
+							</aside>
+
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							![Islandora Large Image](images/screenshots/islandora_image.png)
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							![Islandora Book](images/screenshots/islandora_book.png)
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							![Islandora Audio](images/screenshots/islandora_audio.png)
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							![Islandora Video](images/screenshots/islandora_video.png)
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							![Islandora Citation](images/screenshots/islandora_citation.png)
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							![Islandora Newspaper](images/screenshots/islandora_newspaper.png)
+						</script>
+					</section>
+					<!-- end nested slides -->
+				</section>
+
+				<section>
+					<!-- begin nested slides -->
+					<section data-markdown>
+						<script type="text/template">
+							# Show and Tell
+							### [Form Builder](http://sandbox.islandora.ca/admin/islandora/xmlform) <!-- .element: target="_blank" -->
+							- create xml forms
+							- MODS for detail
+							- DC transformations
+							- custom schemas
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+							![Form Builder Preview](images/screenshots/form_builder_1.png)
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							![Form Builder XML Elements](images/screenshots/form_builder_2.png)
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							![Form Builder Select List](images/screenshots/form_builder_3.png)
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							![Form Builder Association](images/screenshots/form_builder_4.png)
+						</script>
+					</section>
+					<!-- end nested slides -->
+				</section>
+
+				<section>
+					<!-- begin nested slides -->
+					<section data-markdown>
+						<script type="text/template">
+							# Show and Tell
+							### Customizations
+							- Detroit Public Library Digital Collections
+							- Cherry Hill LibraryDAMS
+						</script>
+					</section>
+
+					<section>
+						<a href="http://digitalcollections.detroitpubliclibrary.org/admin/content/islandora-objects" target="_blank">
+							<img src="images/screenshots/dpldams_management.png">
+						</a>
+					</section>
+					<section>
+						<a href="http://digitalcollections.detroitpubliclibrary.org/islandora/search/catch_all_fields_mt%3A%28ty%29%20OR%20catch_all_fields_et%3A%28ty%29" target="_blank">
+							<img src="images/screenshots/dpldams_search_ty.png">
+						</a>
+					</section>
+					<section>
+						<div class="left"	>
+							<a href="http://librarydams.chillco.com/" target="_blank">
+								<img src="images/screenshots/librarydams_responsive_1.png">
+							</a>
+						</div>
+						<div class="right">
+							<a href="http://librarydams.chillco.com/" target="_blank">
+								<img src="images/screenshots/librarydams_responsive_2.png">
+							</a>
+						</div>
+					</section>
+					<section>
+						<div class="left"	>
+							<a href="http://librarydams.chillco.com/" target="_blank">
+								<img src="images/screenshots/librarydams_metadata_human.png">
+							</a>
+						</div>
+						<div class="right">
+							<a href="http://librarydams.chillco.com/" target="_blank">
+								<img src="images/screenshots/librarydams_metadata_mods.png">
+							</a>
+						</div>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							![LibraryDAMS Zoom Viewer](images/screenshots/librarydams_zoom_viewer.png)
+						</script>
+					</section>
+					<!-- end nested slides -->
+				</section>
+
+				<section data-state="bg-cherryhill" data-background="images/logos/cherryhill_bg.png" data-background-size="contain" data-markdown>
+					<script type="text/template">
+						# Thank You
+						Please don’t hesitate to ask any questions!
+						### Tommy Keswick  
+						The Cherry Hill Company  
+						tkeswick@chillco.com  
+						[@TommyKeswick](https://twitter.com/TommyKeswick)  
+						[@thecherryhillco](https://twitter.com/thecherryhillco)  
+					</script>
 				</section>
 
 			</div>
@@ -57,7 +408,7 @@
 				controls: true,
 				progress: true,
 				history: true,
-				center: true,
+				center: false,
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
